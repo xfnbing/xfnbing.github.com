@@ -41,12 +41,8 @@ function addBrand(API, postData) {
 				url :  API,//  
 				type : "post",//  
 				data : postData, //  
-				dataType : "json",//  
-				contentType : "application/json;charset=utf-8",//  
-				beforeSend : function(xhr) {
-					xhr.setRequestHeader('Authorization',
-							"Basic eXVuaHVpeGluZ2Rvbmc6Z25vZGduaXhpdWhudXk=");
-				},
+				 dataType:'jsonp', 
+				contentType : "application/json;charset=utf-8",//   
 				success : function(data) {//  
 
 					document.getElementById('resultData').innerHTML = response.responseText;
