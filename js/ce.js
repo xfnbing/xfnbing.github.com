@@ -37,12 +37,10 @@ function addBrand(API, postData) {
 	document.getElementById('requestData').innerHTML = "API:&nbsp&nbsp&nbsp"
 			+ API + "<br/>JSON数据:&nbsp&nbsp&nbsp" + postData;
 	var response = $
-			.ajax( {
+			.jsonp( {
 				url :  API,//  
 				type : "post",//  
-				data : postData, //  
-				 dataType:'jsonp', 
-				contentType : "application/json;charset=utf-8",//   
+				data : postData, //   
 				success : function(data) {//  
 
 					document.getElementById('resultData').innerHTML = response.responseText;
